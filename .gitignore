@@ -1,0 +1,52 @@
+# ─── Model weights & adapters (local only — far too large for git) ───
+# Leading slash anchors to repo root so we don't accidentally ignore
+# code folders like scripts/data/.
+/models/
+/local_model/
+/final_model/
+*.safetensors
+*.bin
+*.gguf
+*.pt
+*.pth
+
+# ─── Datasets & large data files (Hou et al. 2025 — not redistributed here) ───
+/data/
+*.rar
+unified.jsonl
+evaluation_samples.jsonl
+
+# ─── Generated outputs & logs ───
+/outputs/
+*.log
+chatbot_history.jsonl
+interactions.jsonl
+showcase_outputs.jsonl
+
+# ─── Python ───
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ─── Virtual environments ───
+venv/
+.venv/
+env/
+.env
+
+# ─── Gradio ───
+.gradio/
+
+# ─── OS / editor cruft ───
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Stale technical report (contains old synthetic numbers that contradict the
+# real evaluation; excluded until rewritten to match the 20% result).
+TECHNICAL_REPORT.md
+
+# NOTE: testing/results/ is intentionally NOT ignored — the evaluation
+# report and final scores are small and are kept as project evidence.
